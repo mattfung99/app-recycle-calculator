@@ -8,7 +8,8 @@
     <string name="btn_load_form">Load Form</string>
     <string name="btn_edit_form">Edit Form</string>
     <string name="btn_calculate_refund">Calculate Refund</string>
-    <string name="display_current_form">-No Form Loaded-</string>
+    <string name="display_current_form">Current Loaded Form: %s</string>
+    <string name="display_current_form_default">-No Form Loaded-</string>
     <string name="empty_string" />
 
     <!--  NewFormActivity  -->
@@ -32,6 +33,7 @@
     <string name="text_label_liquor_plastic_alt">Liquor Plastic (Over 1L) - Quantity:</string>
     <string name="text_label_liquor_glass">Liquor Glass (0 – 1L) - Quantity:</string>
     <string name="text_label_liquor_glass_alt">Liquor Glass (Over 1L) - Quantity:</string>
+    <string name="hint_form_name">Max 20 characters</string>
     <string name="hint_default">Quantity for (0 – 1L)</string>
     <string name="hint_alt">Quantity for (Over 1L)</string>
     <string name="hint_500">Quantity for (0 – 500mL)</string>
@@ -65,5 +67,6 @@
     <string name="calc_label_liquor_glass_alt">Liquor Glass (Over 1L): %d x $0.28 = $%.2f</string>
     <string name="total_refund">Total Refund: $%.2f</string>
     <string name="hint_quantity">Enter quantity…</string>
+    <string name="empty_fields">Empty Mode</string>
 
 </resources>

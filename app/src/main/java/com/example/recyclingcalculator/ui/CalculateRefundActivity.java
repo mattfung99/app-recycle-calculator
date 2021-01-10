@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.recyclingcalculator.R;
+import com.example.recyclingcalculator.model.DataHandler;
 import java.util.Objects;
 
 public class CalculateRefundActivity extends AppCompatActivity {
+    // Reference the singleton instance
+    private final DataHandler dHandler = DataHandler.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

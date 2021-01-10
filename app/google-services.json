@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "54099390793",
+    "project_id": "app-recycle-calculator",
+    "storage_bucket": "app-recycle-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54099390793:android:944aa4bda8faabdc0c2a98",
+        "android_client_info": {
+          "package_name": "com.example.app_recycle_calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54099390793-fiq9nuhntt57icgq5uvoh3ep5vimimue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg7BvI7gXRMH70lWDLU23aN70czpDVC50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54099390793-fiq9nuhntt57icgq5uvoh3ep5vimimue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
