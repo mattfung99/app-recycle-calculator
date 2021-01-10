@@ -8,10 +8,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.recyclingcalculator.R;
 import com.example.recyclingcalculator.model.DataHandler;
 import com.example.recyclingcalculator.model.Form;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.Objects;
 
 public class NewFormActivity extends AppCompatActivity {
@@ -19,11 +26,17 @@ public class NewFormActivity extends AppCompatActivity {
     private final DataHandler dHandler = DataHandler.getInstance();
     private Form form;
 
+    // Reference Firebase
+    private final DatabaseReference fireBaseRef = FirebaseDatabase.getInstance().getReference();
+
     // UI Widgets
     private TextView textDisplayFormName;
     private Button btnCreate;
     private EditText stringKey;
     private final EditText[] editTextWidgets = new EditText[13];
+
+    // Flags
+    private boolean isKeyFound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,33 +113,60 @@ public class NewFormActivity extends AppCompatActivity {
         for (EditText eInput : editTextWidgets) {
             String strIn = eInput.getText().toString();
             if ((strIn.matches(getString(R.string.empty_string))) || (strIn.contains("-")) || (strIn.charAt(0) == '0' && strIn.length() > 1)) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     private boolean validateKey() {
-        return !(stringKey.getText().toString().matches(getString(R.string.empty_string)));
+        return stringKey.getText().toString().matches(getString(R.string.empty_string));
+    }
+
+    private void findKey() {
+        fireBaseRef.orderByKey().equalTo(stringKey.getText().toString()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                isKeyFound = dataSnapshot.exists();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}
+        });
     }
 
     private void editForm() {
-        if (!validateKey()) {
+        if (validateKey()) {
             Toast.makeText(this, getString(R.string.toast_empty_key), Toast.LENGTH_SHORT).show();
-        } else if(!validateFields()) {
+        } else if(isKeyFound) {
+            if (stringKey.getText().toString().matches(form.getKey())) {
+                fillForm();
+                Toast.makeText(this, getString(R.string.toast_form_saved), Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                Toast.makeText(this, getString(R.string.toast_key_exists), Toast.LENGTH_SHORT).show();
+            }
+        } else if(validateFields()) {
             Toast.makeText(this, getString(R.string.toast_invalid_fields), Toast.LENGTH_SHORT).show();
         } else {
             fillForm();
+            Toast.makeText(this, getString(R.string.toast_form_saved), Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 
     private void createForm() {
-        if (!validateKey()) {
+        findKey();
+        if (validateKey()) {
             Toast.makeText(this, getString(R.string.toast_empty_key), Toast.LENGTH_SHORT).show();
-        } else if(!validateFields()) {
+        } else if(isKeyFound) {
+            Toast.makeText(this, getString(R.string.toast_key_exists), Toast.LENGTH_SHORT).show();
+        } else if(validateFields()) {
             Toast.makeText(this, getString(R.string.toast_invalid_fields), Toast.LENGTH_SHORT).show();
         } else {
             fillForm();
+            Toast.makeText(this, getString(R.string.toast_form_created), Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 
@@ -149,8 +189,13 @@ public class NewFormActivity extends AppCompatActivity {
                 Integer.parseInt(editTextWidgets[12].getText().toString())
             )
         );
+        saveToFirebase();
         dHandler.setFormLoaded(true);
-        finish();
+    }
+
+    private void saveToFirebase() {
+        Form currForm = dHandler.getForm();
+        fireBaseRef.child(currForm.getKey()).setValue(currForm);
     }
 
     public static Intent makeIntent(Context context) {
