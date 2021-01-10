@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">RecyclingCalculator</string>
+    <string name="app_name">Recycling Calculator</string>
     <string name="action_settings">Settings</string>
 
     <!--  MainActivity  -->
     <string name="main_activity_name">Recycling Calculator</string>
-    <string name="btnNewForm">New Form</string>
-    <string name="btnLoadForm">Load Form</string>
+    <string name="btn_new_form">New Form</string>
+    <string name="btn_load_form">Load Form</string>
+    <string name="btn_edit_form">Edit Form</string>
+    <string name="btn_calculate_refund">Calculate Refund</string>
+    <string name="display_current_form">-No Form Loaded-</string>
+
+    <!--  NewFormActivity  -->
+    <string name="new_form_activity_name">New Form</string>
+
+    <!--  LoadFormActivity  -->
+    <string name="load_form_activity_name">Load Form</string>
+    <string name="text_label_enter_key">Please enter key</string>
+    <string name="hint_enter_key">Type Here…</string>
+
 </resources>
