@@ -1,7 +1,6 @@
 package com.example.recyclingcalculator.model;
 
 public class Form {
-    // Create instance fields
     private String key;
     private int aluminum;
     private int plasticSmall;
@@ -16,6 +15,8 @@ public class Form {
     private int liquorPlasticLarge;
     private int liquorGlassSmall;
     private int liquorGlassLarge;
+
+    public Form() {}
 
     public Form(String key, int aluminum, int plasticSmall, int plasticLarge, int drinkBoxSmall, int drinkBoxLarge, int glassSmall, int glassLarge, int pouch, int bagBox, int liquorPlasticSmall, int liquorPlasticLarge, int liquorGlassSmall, int liquorGlassLarge) {
         this.key = key;
@@ -144,10 +145,5 @@ public class Form {
 
     public void setLiquorGlassLarge(int liquorGlassLarge) {
         this.liquorGlassLarge = liquorGlassLarge;
-    }
-
-    @Override
-    public String toString() {
-        return aluminum + "\n" + plasticSmall + "\n" + plasticLarge + "\n" + drinkBoxSmall + "\n" + drinkBoxLarge + "\n" + glassSmall + "\n" + glassLarge + "\n" + pouch + "\n" + bagBox + "\n" + liquorPlasticSmall + "\n" + liquorPlasticLarge + "\n" + liquorGlassSmall + "\n" + liquorGlassLarge;
     }
 }

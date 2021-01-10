@@ -40,11 +40,12 @@
     <string name="hint_500_alt">Quantity for (501mL – 1L)</string>
     <string name="btn_create_form">Create Form</string>
     <string name="btn_save_form">Save Form</string>
-    <string name="toast_empty_key">Key cannot be empty</string>
+    <string name="toast_empty_key">Name cannot be empty</string>
     <string name="toast_invalid_fields">Fields are invalid</string>
-    <string name="toast_key_exists">Key already exists</string>
+    <string name="toast_key_exists">Name already exists</string>
     <string name="toast_form_created">Form Created</string>
     <string name="toast_form_saved">Form Saved</string>
+    <string name="toast_key_dne">Key does not exist</string>
 
     <!--  LoadFormActivity  -->
     <string name="load_form_activity_name">Load Form</string>

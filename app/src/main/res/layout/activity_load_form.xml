@@ -20,21 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textLabelEnterKey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="154dp"
-            android:layout_marginTop="69dp"
-            android:layout_marginEnd="153dp"
-            android:layout_marginBottom="197dp"
-            android:text="@string/text_label_enter_key"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/btnFetchForm"
             android:layout_width="wrap_content"
@@ -50,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/enterKey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="101dp"
@@ -61,6 +46,21 @@
             android:hint="@string/hint_enter_key"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="204dp"
+            android:text="@string/text_label_enter_key"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

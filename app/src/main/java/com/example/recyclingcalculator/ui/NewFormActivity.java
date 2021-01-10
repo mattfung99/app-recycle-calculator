@@ -19,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class NewFormActivity extends AppCompatActivity {
@@ -194,8 +195,25 @@ public class NewFormActivity extends AppCompatActivity {
     }
 
     private void saveToFirebase() {
-        Form currForm = dHandler.getForm();
-        fireBaseRef.child(currForm.getKey()).setValue(currForm);
+//        Form currForm = dHandler.getForm();
+//        fireBaseRef.child(currForm.getKey()).setValue(currForm);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("key", dHandler.getForm().getKey());
+        map.put("aluminum", dHandler.getForm().getAluminum());
+        map.put("plasticSmall", dHandler.getForm().getPlasticSmall());
+        map.put("plasticLarge", dHandler.getForm().getPlasticLarge());
+        map.put("drinkBoxSmall", dHandler.getForm().getDrinkBoxSmall());
+        map.put("drinkBoxLarge", dHandler.getForm().getDrinkBoxLarge());
+        map.put("glassSmall", dHandler.getForm().getGlassSmall());
+        map.put("glassLarge", dHandler.getForm().getGlassLarge());
+        map.put("pouch", dHandler.getForm().getPouch());
+        map.put("bagBox", dHandler.getForm().getBagBox());
+        map.put("liquorPlasticSmall", dHandler.getForm().getLiquorPlasticSmall());
+        map.put("liquorPlasticLarge", dHandler.getForm().getLiquorPlasticLarge());
+        map.put("liquorGlassSmall", dHandler.getForm().getLiquorGlassSmall());
+        map.put("liquorGlassLarge", dHandler.getForm().getLiquorGlassLarge());
+
+        fireBaseRef.child(dHandler.getForm().getKey()).setValue(map);
     }
 
     public static Intent makeIntent(Context context) {
