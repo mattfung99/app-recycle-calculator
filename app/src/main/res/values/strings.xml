@@ -1,9 +1,69 @@
 <resources>
-    <string name="app_name">RecyclingCalculator</string>
+    <string name="app_name">Recycling Calculator</string>
     <string name="action_settings">Settings</string>
 
     <!--  MainActivity  -->
     <string name="main_activity_name">Recycling Calculator</string>
-    <string name="btnNewForm">New Form</string>
-    <string name="btnLoadForm">Load Form</string>
+    <string name="btn_new_form">New Form</string>
+    <string name="btn_load_form">Load Form</string>
+    <string name="btn_edit_form">Edit Form</string>
+    <string name="btn_calculate_refund">Calculate Refund</string>
+    <string name="display_current_form">-No Form Loaded-</string>
+    <string name="empty_string" />
+
+    <!--  NewFormActivity  -->
+    <string name="new_form_activity_name">New Form</string>
+    <string name="display_form_name">Editing: %s</string>
+    <string name="text_label_form_name">Form Name</string>
+    <string name="text_label_aluminum">Aluminum (0 – 1L) - Quantity:</string>
+    <string name="text_label_plastic">Plastic (0 – 1L) - Quantity:</string>
+    <string name="text_label_plastic_alt">Plastic (Over 1L) - Quantity:</string>
+    <string name="text_label_drink_box">Drink Box (0 – 500mL) - Quantity:</string>
+    <string name="text_label_drink_box_alt">Drink Box (501mL - 1L) - Quantity:</string>
+    <string name="text_label_gable_top">Gable Top (0 – 1L) - Quantity:</string>
+    <string name="text_label_gable_top_alt">Gable Top (Over 1L) - Quantity:</string>
+    <string name="text_label_glass">Glass (0 – 1L) - Quantity:</string>
+    <string name="text_label_glass_alt">Glass (Over 1L) - Quantity:</string>
+    <string name="text_label_metal">Bi-Metal (0 – 1L) - Quantity:</string>
+    <string name="text_label_metal_alt">Bi-Metal (Over 1L) - Quantity:</string>
+    <string name="text_label_pouch">Pouch (0 – 1L) - Quantity:</string>
+    <string name="text_label_bag">Bag-in-a-Box (Over 1L) - Quantity:</string>
+    <string name="text_label_liquor_plastic">Liquor Plastic (0 – 1L) - Quantity:</string>
+    <string name="text_label_liquor_plastic_alt">Liquor Plastic (Over 1L) - Quantity:</string>
+    <string name="text_label_liquor_glass">Liquor Glass (0 – 1L) - Quantity:</string>
+    <string name="text_label_liquor_glass_alt">Liquor Glass (Over 1L) - Quantity:</string>
+    <string name="hint_default">Quantity for (0 – 1L)</string>
+    <string name="hint_alt">Quantity for (Over 1L)</string>
+    <string name="hint_500">Quantity for (0 – 500mL)</string>
+    <string name="hint_500_alt">Quantity for (501mL – 1L)</string>
+    <string name="btn_create_form">Create Form</string>
+
+    <!--  LoadFormActivity  -->
+    <string name="load_form_activity_name">Load Form</string>
+    <string name="text_label_enter_key">Please enter form name</string>
+    <string name="hint_enter_key">Type Here…</string>
+
+    <!--  CalculateRefundActivity  -->
+    <string name="calculate_refund_activity_name">Calculate Refund</string>
+    <string name="display_form_name_alt">Calculating Refund for: %s</string>
+    <string name="calc_label_aluminum">Aluminum (0 – 1L): %d x $0.10 = $%.2f</string>
+    <string name="calc_label_plastic">Plastic (0 – 1L): %d x $0.13 = $%.2f</string>
+    <string name="calc_label_plastic_alt">Plastic (Over 1L): %d x $0.15 = $%.2f</string>
+    <string name="calc_label_drink_box">Drink Box (0 – 500mL): %d x $0.10 = $%.2f</string>
+    <string name="calc_label_drink_box_alt">Drink Box (501mL - 1L): %d x $0.15 = $%.2f</string>
+    <string name="calc_label_gable_top">Gable Top (0 – 1L): %d x $0.10 = $%.2f</string>
+    <string name="calc_label_gable_top_alt">Gable Top (Over 1L): %d x $0.14 = $%.2f</string>
+    <string name="calc_label_glass">Glass (0 – 1L): %d x $0.17 = $%.2f</string>
+    <string name="calc_label_glass_alt">Glass (Over 1L): %d x $0.28 = $%.2f</string>
+    <string name="calc_label_metal">Bi-Metal (0 – 1L): %d x $0.13 = $%.2f</string>
+    <string name="calc_label_metal_alt">Bi-Metal (Over 1L): %d x $0.10 = $%.2f</string>
+    <string name="calc_label_pouch">Pouch (0 – 1L): %d x $0.10 = $%.2f</string>
+    <string name="calc_label_bag">Bag-in-a-Box (Over 1L): %d x $0.17 = $%.2f</string>
+    <string name="calc_label_liquor_plastic">Liquor Plastic (0 – 1L): %d x $0.13 = $%.2f</string>
+    <string name="calc_label_liquor_plastic_alt">Liquor Plastic (Over 1L): %d x $0.16 = $%.2f</string>
+    <string name="calc_label_liquor_glass">Liquor Glass (0 – 1L): %d x $0.24 = $%.2f</string>
+    <string name="calc_label_liquor_glass_alt">Liquor Glass (Over 1L): %d x $0.28 = $%.2f</string>
+    <string name="total_refund">Total Refund: $%.2f</string>
+    <string name="hint_quantity">Enter quantity…</string>
+
 </resources>
