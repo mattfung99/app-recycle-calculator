@@ -32,6 +32,12 @@
             android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.RecyclingCalculator" />
+        <activity
+            android:name=".ui.CalculateRefundActivity"
+            android:label="@string/title_activity_calculate_refund"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RecyclingCalculator" />
     </application>
 
 </manifest>

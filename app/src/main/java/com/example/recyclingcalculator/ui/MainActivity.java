@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupWidgets() {
         setupNewForm();
         setupLoadForm();
+        setupEditForm();
+        setupCalculateRefund();
     }
 
     private void setupNewForm() {
@@ -33,6 +35,22 @@ public class MainActivity extends AppCompatActivity {
         btnLoadForm.setOnClickListener(v -> {
             Intent loadFormIntent = LoadFormActivity.makeIntent(MainActivity.this);
             startActivity(loadFormIntent);
+        });
+    }
+
+    private void setupEditForm() {
+        Button btnEditForm = (Button)findViewById(R.id.btnEditForm);
+        btnEditForm.setOnClickListener(v -> {
+            Intent editFormIntent = NewFormActivity.makeIntent(MainActivity.this);
+            startActivity(editFormIntent);
+        });
+    }
+
+    private void setupCalculateRefund() {
+        Button btnCalculateRefund = (Button)findViewById(R.id.btnCalculateRefund);
+        btnCalculateRefund.setOnClickListener(v -> {
+            Intent calculateRefundIntent = CalculateRefundActivity.makeIntent(MainActivity.this);
+            startActivity(calculateRefundIntent);
         });
     }
 }
