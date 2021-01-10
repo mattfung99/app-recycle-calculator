@@ -30,44 +30,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupNewForm() {
-        Button btnNewForm = (Button)findViewById(R.id.btnNewForm);
+        Button btnNewForm = (Button) findViewById(R.id.btnNewForm);
         btnNewForm.setOnClickListener(v -> {
             Intent newFormIntent = NewFormActivity.makeIntent(MainActivity.this);
             startActivity(newFormIntent);
         });
     }
-  
-    private void start(){
+
+    private void start() {
         int a = 1;
         int b = 2;
         int c = 3;
         HashMap<String, Object> users = new HashMap<>();
-        Test t = new Test(a,b,c);
-        users.put("Steven",t);
-        users.put("Matt","test2");
-        FirebaseDatabase.getInstance().getReference().child("saved-list").child("name").setValue(users);
-      
-    private void setupEditForm() {
-        Button btnEditForm = (Button)findViewById(R.id.btnEditForm);
-        btnEditForm.setOnClickListener(v -> {
-            Intent editFormIntent = NewFormActivity.makeIntent(MainActivity.this);
-            startActivity(editFormIntent);
-        });
+        Test t = new Test(a, b, c);
+        users.put("Steven", t);
+        users.put("Matt", "test2");
+        FirebaseDatabase.getInstance().getReference().child("saved-list").child("users").setValue(users);
     }
 
-    private void setupCalculateRefund() {
-        Button btnCalculateRefund = (Button)findViewById(R.id.btnCalculateRefund);
-        btnCalculateRefund.setOnClickListener(v -> {
-            Intent calculateRefundIntent = CalculateRefundActivity.makeIntent(MainActivity.this);
-            startActivity(calculateRefundIntent);
-        });
+        private void setupEditForm () {
+            Button btnEditForm = (Button) findViewById(R.id.btnEditForm);
+            btnEditForm.setOnClickListener(v -> {
+                Intent editFormIntent = NewFormActivity.makeIntent(MainActivity.this);
+                startActivity(editFormIntent);
+            });
+        }
+
+        private void setupCalculateRefund () {
+            Button btnCalculateRefund = (Button) findViewById(R.id.btnCalculateRefund);
+            btnCalculateRefund.setOnClickListener(v -> {
+                Intent calculateRefundIntent = CalculateRefundActivity.makeIntent(MainActivity.this);
+                startActivity(calculateRefundIntent);
+            });
+        }
+
+        private void setupLoadForm () {
+            Button btnLoadForm = (Button) findViewById(R.id.btnLoadForm);
+            btnLoadForm.setOnClickListener(v -> {
+                Intent loadFormIntent = LoadFormActivity.makeIntent(MainActivity.this);
+                startActivity(loadFormIntent);
+            });
+        }
     }
-      
-     private void setupLoadForm() {
-        Button btnLoadForm = (Button)findViewById(R.id.btnLoadForm);
-        btnLoadForm.setOnClickListener(v -> {
-            Intent loadFormIntent = LoadFormActivity.makeIntent(MainActivity.this);
-            startActivity(loadFormIntent);
-        });
-    }
-}
