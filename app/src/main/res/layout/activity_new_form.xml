@@ -7,4 +7,412 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    <TextView
+        android:id="@+id/textDisplayFormName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="652dp"
+        android:text="@string/display_form_name"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="380dp"
+        android:layout_height="530dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="107dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textLabelFormName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_form_name"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_enter_key"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelAluminum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_aluminum"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numAluminum"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_default"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelPlastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_plastic"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numPlastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_default"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelPlasticAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_plastic_alt"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numPlasticAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_alt"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelDrinkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_drink_box"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numDrinkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_500"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelDrinkBoxAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_drink_box_alt"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numDrinkBoxAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_500_alt"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelGlass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_glass"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numGlass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_default"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelGlassAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_glass_alt"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numGlassAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_alt"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelPouch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_pouch"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numPouch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_default"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelBagBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_bag"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numBagBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_alt"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelLiquorPlastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_liquor_plastic"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numLiquorPlastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_default"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelLiquorPlasticAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_liquor_plastic_alt"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numLiquorPlasticAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_alt"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelLiquorGlass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_liquor_glass"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numLiquorGlass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_default"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelLiquorGlassAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_label_liquor_glass_alt"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numLiquorGlassAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/empty_string"
+                android:ems="10"
+                android:hint="@string/hint_alt"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="616dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="67dp"
+        android:text="@string/btn_create_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
