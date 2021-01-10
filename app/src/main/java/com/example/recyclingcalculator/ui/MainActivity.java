@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         btnEditForm.setEnabled(dHandler.isFormLoaded());
         textNotifier.setText(
-                dHandler.isFormLoaded() ?
-                getString(R.string.display_current_form) :
-                getString(R.string.display_current_form_default)
+            dHandler.isFormLoaded() ?
+            getString(R.string.display_current_form, dHandler.getForm().getKey()) :
+            getString(R.string.display_current_form_default)
         );
     }
 
@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupNewForm() {
         btnNewForm.setOnClickListener(v -> {
             Intent newFormIntent = NewFormActivity.makeIntent(MainActivity.this);
+            newFormIntent.putExtra("edit", false);
             startActivity(newFormIntent);
         });
     }
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupEditForm() {
         btnEditForm.setOnClickListener(v -> {
             Intent editFormIntent = NewFormActivity.makeIntent(MainActivity.this);
+            editFormIntent.putExtra("edit", true);
             startActivity(editFormIntent);
         });
     }

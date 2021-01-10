@@ -39,6 +39,9 @@
     <string name="hint_500">Quantity for (0 – 500mL)</string>
     <string name="hint_500_alt">Quantity for (501mL – 1L)</string>
     <string name="btn_create_form">Create Form</string>
+    <string name="btn_save_form">Save Form</string>
+    <string name="toast_empty_key">Key cannot be empty</string>
+    <string name="toast_invalid_fields">Fields are invalid</string>
 
     <!--  LoadFormActivity  -->
     <string name="load_form_activity_name">Load Form</string>
